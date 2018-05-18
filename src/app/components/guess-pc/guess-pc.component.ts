@@ -12,24 +12,20 @@ export class GuessPcComponent implements OnInit {
   gano = false;
 
   constructor() {
-  console.log('min ' + this.min + ' max ' + this.max + ' mun ' + this.numero);
-}
+
+  }
 
   ngOnInit() {
   }
 
   menor(i){
     this.max = this.numeroArr[i];
-    console.log('Se cambia el maximo');
     this.calcularNumero(this.min, this.max,i);
-    console.log('min' + this.min + ' max ' + this.max + ' mun ' + this.numero);
   }
 
   mayor(i){
     this.min = this.numeroArr[i];
-    console.log('Se cambia el minimo');
     this.calcularNumero(this.min, this.max,i);
-    console.log('min' + this.min + ' max ' + this.max + ' mun ' + this.numero);
   }
 
   calcularNumero(min,max,i){
