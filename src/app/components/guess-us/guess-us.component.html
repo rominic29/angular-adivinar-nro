@@ -5,7 +5,7 @@
       </div>
       <div class="col-md-6 order-md-2 text-center text-md-rigth pr-md-5 bottom15 top15">
         <h1>Es tú turno para adivinar.</h1>
-        <p>Estoy pensando un número entre 1 y 100. Vamos a ver en cuantos intentos lo adivinas.</p>
+        <p>Estoy pensando un número entero entre 1 y 100. Vamos a ver en cuantos intentos lo adivinas.</p>
         <a [routerLink]="['/home']" class="btn btn-danger active">Volver...</a>
         <button (click)="reset()" class="btn btn-warning active">Reiniciar</button>
       </div>
@@ -25,6 +25,7 @@
 </div>
 <hr>
 <div class="masthead-followup row m-0 ">
+  <h4>Escribe el número que crees estoy pensando.</h4>
   <div class="col-12 col-md-2 border-round">
   </div>
   <div class="col-12 col-md-5 p-4 p-md-5 ">
@@ -36,7 +37,7 @@
     </div>
     <hr>
     <div>
-      <button *ngIf="comparacion && !gano" class="btn btn-primary" type="button">Error, el número debe ser {{comparacion}}. </button>
+      <button *ngIf="comparacion && !gano" class="btn btn-danger" type="button">No es el número {{numComprobar.value}}, debe ser <strong>{{comparacion}}</strong>. </button>
     </div>
   </div>
   <div class="col-12 col-md-5 p-4 p-md-5 border-round">

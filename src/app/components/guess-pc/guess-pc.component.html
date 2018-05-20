@@ -5,7 +5,7 @@
       </div>
       <div class="col-md-6 order-md-2 text-center text-md-rigth pr-md-5 bottom15 top15">
         <h1>Es mi turno para adivinar.</h1>
-        <p>Piensa en un número entre 1 y 100. No me lo digas!!! sólo piensalo. Vamos a ver en cuantos intentos lo adivino.</p>
+        <p>Piensa en un número entero entre 1 y 100. No me lo digas!!! sólo piensalo. Vamos a ver en cuantos intentos lo adivino.</p>
         <a [routerLink]="['/home']" class="btn btn-danger active">Volver...</a>
         <button (click)="reset()" class="btn btn-warning active">Reiniciar</button>
       </div>
@@ -26,7 +26,8 @@
 <hr>
 <div class="masthead-followup row m-0 ">
   <div class="col-12 col-md-9 p-4 p-md-5 ">
-    <h4>Mmmmm, estás pensando en el número <strong>{{numero}}</strong>.</h4>
+    <h4>Mmmmm, el número que estás pensando en el <strong>{{numero}}</strong> ???.</h4>
+    <hr>
     <table>
       <tr>
         <td><button type="button" class="col-12 btn-lg btn-success" (click)="adivino()">Si, es Correcto!!</button></td>
